@@ -1,0 +1,72 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require bootstrap
+ *= require fontawesome
+ *= require_self
+ */
+
+.form-task {
+  border: 0;
+  border-bottom: solid 1px #d7d7d7;
+  padding: 5px;
+  width: 100%;
+  margin-bottom: 5px;
+  outline: 0;
+  &:focus {
+    border-color: #66afe9;
+  }
+}
+
+.form-task-select {
+  border: 0;
+  border-bottom: solid 1px #d7d7d7;
+  padding: 5px;
+  width: 100%;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  outline: 0;
+  background-color: #fff;
+  &:focus {
+    border-color: #66afe9;
+  }
+}
+
+.title-underline {
+  border-bottom: solid 1px #e0e0e0;
+  padding: 3px;
+}
+
+.list_container {
+  border: solid 1px #d9d9d9;
+  width: 100%;
+  display: table;
+  min-height: 35px;
+}
+
+.task {
+  padding: 5px;
+  border-bottom: solid 1px #d9d9d9;
+  // display: table-row;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+  .title {
+    font-size: 14px;
+    margin: 0;
+  } 
+  .description {
+    font-size: 10px;
+    margin: 0;
+  }
+}

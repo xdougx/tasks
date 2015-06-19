@@ -1,0 +1,68 @@
+<section class="container" id="tasks">
+  <div class="col-sm-12">
+
+    <h4 class="title-underline">Tarefas</h4>
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2" id="form_container">
+        <h5>Nova Tarefa</h5>
+        <div class="from-group">
+          <input class="form-task" id="task_title" name="task[title]" placeholder="Tarefa">
+        </div>
+
+        <div class="from-group">
+          <input class="form-task" id="task_description" name="task[description]" placeholder="Descrição">
+        </div>
+
+        <div class="from-group">
+          <select class="form-task-select" id="task_destination">
+            <option value="#home">Casa</option>
+            <option value="#work">Trabalho</option>
+          </select>
+        </div>
+
+        <div class="from-group">
+          <button class="btn btn-primary btn-xs" id="add_new_task">Adicionar Tarefa</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row">    
+      <div id="tasks_container">
+        <div class="col-sm-4">
+          <h5>Casa</h5>
+
+          <div class="list_container" id="home">
+          </div>
+        </div>
+
+        <div class="col-sm-4">
+          <h5>Trabalho</h5>
+          <div class="list_container" id="work"></div>
+        </div>
+
+        <div class="col-sm-4">
+          <h5>Finalizadas :)</h5>
+          <div class="list_container" id="done"></div>
+        </div>
+      </div>
+    </div>  
+  </div>
+
+  <div class="task" id="template" style="display:none;">
+    <div class="row">  
+      <div class="col-sm-2" class="form">
+        <input type="checkbox" class="form-control complete"> 
+      </div>
+      <div class="col-sm-10" class="text">
+        <p class="title"></p>
+        <p class="description"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<%= content_for :javascript do %>
+  <%= javascript_include_tag asset_path '/tasks', type: :javascript %>
+<% end %>
